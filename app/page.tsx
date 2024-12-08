@@ -17,7 +17,7 @@ export default function Home() {
             className="mx-auto"
           />
         </div>
-        <h1 className="text-6xl font-bold mb-4 animate-pulse text-red-600">BTCSANTA</h1>
+        <h1 className="text-6xl font-bold mb-4 animate-pulse text-red-600">$BTCSANTA</h1>
         <p className="text-2xl mb-8 font-semibold">🎅 The Most Festive Token on Solana! 🎄</p>
 
         {/* Contract Address */}
