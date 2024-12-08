@@ -28,7 +28,7 @@ export default function Home() {
 
         {/* Social Links */}
         <div className="flex justify-center gap-4 mb-16">
-          <a href="https://t.me/btcsanta" target="_blank" rel="noopener noreferrer"
+          <a href="https://t.me/BTCSantaCTO" target="_blank" rel="noopener noreferrer"
             className="bg-blue-500 hover:bg-blue-600 p-4 rounded-full transition-all">
             <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.188-2.85 5.18-4.68c.223-.198-.054-.308-.346-.11l-6.4 4.02-2.76-.918c-.598-.183-.608-.598.126-.885l10.78-4.156c.505-.184.95.126.786.885z" />
