@@ -2,58 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes fall-fast {
-  0% {
-    transform: translateY(-10%) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(50vh) translateX(100px) rotate(180deg);
-  }
-
-  100% {
-    transform: translateY(100vh) translateX(-100px) rotate(360deg);
-  }
-}
-
 @keyframes fall-medium {
   0% {
-    transform: translateY(-10%) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(50vh) translateX(-80px) rotate(180deg);
+    transform: translateY(-10%);
   }
 
   100% {
-    transform: translateY(100vh) translateX(80px) rotate(360deg);
+    transform: translateY(100vh) translateX(50px);
   }
-}
-
-@keyframes fall-slow {
-  0% {
-    transform: translateY(-10%) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(50vh) translateX(60px) rotate(180deg);
-  }
-
-  100% {
-    transform: translateY(100vh) translateX(-60px) rotate(360deg);
-  }
-}
-
-.animate-fall-fast {
-  animation: fall-fast linear infinite;
 }
 
 .animate-fall-medium {
   animation: fall-medium linear infinite;
-}
-
-.animate-fall-slow {
-  animation: fall-slow linear infinite;
 }
 
 :root {

@@ -6,73 +6,25 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#7ed65b] text-black overflow-hidden">
-      {/* Snow Effect Layers */}
+      {/* Optimized Snow Effect */}
       <div className="fixed top-0 left-0 w-full h-full pointer-events-none">
-        {/* Front layer - faster, larger flakes */}
-        <div className="absolute w-full h-full">
-          {Array.from({ length: 30 }).map((_, i) => (
-            <div
-              key={`front-${i}`}
-              className="absolute animate-fall-fast"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `-${Math.random() * 20}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${Math.random() * 2 + 3}s`,
-                fontSize: '20px',
-                opacity: Math.random() * 0.3 + 0.7,
-                transform: `rotate(${Math.random() * 360}deg)`,
-                filter: 'blur(0px)',
-              }}
-            >
-              ❄️
-            </div>
-          ))}
-        </div>
-
-        {/* Middle layer - medium speed and size */}
-        <div className="absolute w-full h-full">
-          {Array.from({ length: 40 }).map((_, i) => (
-            <div
-              key={`mid-${i}`}
-              className="absolute animate-fall-medium"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `-${Math.random() * 20}%`,
-                animationDelay: `${Math.random() * 4}s`,
-                animationDuration: `${Math.random() * 3 + 5}s`,
-                fontSize: '16px',
-                opacity: Math.random() * 0.2 + 0.5,
-                transform: `rotate(${Math.random() * 360}deg)`,
-                filter: 'blur(1px)',
-              }}
-            >
-              ❄️
-            </div>
-          ))}
-        </div>
-
-        {/* Back layer - slower, smaller flakes */}
-        <div className="absolute w-full h-full">
-          {Array.from({ length: 30 }).map((_, i) => (
-            <div
-              key={`back-${i}`}
-              className="absolute animate-fall-slow"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `-${Math.random() * 20}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${Math.random() * 4 + 7}s`,
-                fontSize: '12px',
-                opacity: Math.random() * 0.2 + 0.3,
-                transform: `rotate(${Math.random() * 360}deg)`,
-                filter: 'blur(2px)',
-              }}
-            >
-              ❄️
-            </div>
-          ))}
-        </div>
+        {/* Single layer with fewer snowflakes */}
+        {Array.from({ length: 20 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute animate-fall-medium"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `-${Math.random() * 20}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${Math.random() * 3 + 4}s`,
+              fontSize: `${Math.random() * 6 + 12}px`,
+              opacity: Math.random() * 0.4 + 0.3,
+            }}
+          >
+            ❄️
+          </div>
+        ))}
       </div>
 
       <div className="container mx-auto px-4 py-16 text-center relative">
@@ -97,7 +49,7 @@ export default function Home() {
 
         {/* Social Links */}
         <div className="flex justify-center gap-6 mb-16">
-          <a href="https://t.me/BTC_Santa_CTO" target="_blank" rel="noopener noreferrer"
+          <a href="https://t.me/BTCSantaCTO" target="_blank" rel="noopener noreferrer"
             className="bg-blue-500 hover:bg-blue-600 p-5 rounded-full transition-all transform hover:scale-110">
             <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.188-2.85 5.18-4.68c.223-.198-.054-.308-.346-.11l-6.4 4.02-2.76-.918c-.598-.183-.608-.598.126-.885l10.78-4.156c.505-.184.95.126.786.885z" />
